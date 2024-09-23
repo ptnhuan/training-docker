@@ -21,16 +21,6 @@ services:
     #   - mssql
     restart: always
 
-  web-front:
-    build: ./config/front
-    container_name: c-web-front
-    tty: true
-    #command: /bin/sh -c "cd /app && npm install"
-    volumes:
-      - ./project/client:/app
-    ports:
-      - 3000:8080
-
   web-mysql:
     container_name: c-web-mysql
     image: "mysql:5.7.43"
